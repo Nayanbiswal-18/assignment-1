@@ -1,0 +1,29 @@
+public class Solution {
+    public void moveZeroes(int[] nums) {
+        int zeroCount = 0;
+
+        // Move non-zero elements to the beginning of the array
+        for (int num : nums) {
+            if (num != 0) {
+                nums[zeroCount++] = num;
+            }
+        }
+
+        // Fill the remaining positions with zeros
+        while (zeroCount < nums.length) {
+            nums[zeroCount++] = 0;
+        }
+     
+    public static void main(String[] args) {
+        int[] nums = {0, 1, 0, 3, 1,2};
+        Solution solution = new Solution();
+        solution.moveZeroes(nums);
+
+        // Print the modified array
+        for (int num : nums) {
+            System.out.print(num + " ");
+        
+
+    }
+    }
+}
